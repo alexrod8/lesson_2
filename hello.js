@@ -1,8 +1,3 @@
-function value(n) {
-  console.log(n);
- return n;
+for(let i = 2; i <= 100; i+= 2) {
+console.log(i);
 }
-
-console.log((value(3) + value(5) * value(7)));
-
-
