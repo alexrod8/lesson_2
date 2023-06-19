@@ -16,8 +16,8 @@ function invaildNumber(number) {
 
 prompt("Welcome to my Calculator!");
 while (true) {
-prompt("Whats the first number: ");
-let num1 = readline.question();
+  prompt("Whats the first number: ");
+  let num1 = readline.question();
   while (invaildNumber(num1)) {
     console.log(`Oops.. that doesn't look like a vaild number`);
     num1 = readline.question(`A vaild Number: `);
@@ -59,8 +59,8 @@ let num1 = readline.question();
   prompt("The result is " + outPut.toFixed());
   prompt("Would you like to do another calculation(yes/no)? ");
   let answer = readline.question();
-  if (answer !== 'yes') {
-    prompt('Have a nice day!');
+  if (answer !== "yes") {
+    prompt("Have a nice day!");
     break;
   }
 }
