@@ -7,7 +7,7 @@
 const readline = require("readline-sync");
 
 function prompt(message) {
-  console.log(` => ${message}`);
+  console.log(`=> ${message}`);
 }
 
 function invaildNumber(number) {
@@ -57,4 +57,4 @@ switch (operation) {
     break;
 }
 
-console.log("The result is " + outPut.toFixed());
+prompt("The result is " + outPut.toFixed());
