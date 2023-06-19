@@ -15,46 +15,52 @@ function invaildNumber(number) {
 }
 
 prompt("Welcome to my Calculator!");
-
+while (true) {
 prompt("Whats the first number: ");
 let num1 = readline.question();
+  while (invaildNumber(num1)) {
+    console.log(`Oops.. that doesn't look like a vaild number`);
+    num1 = readline.question(`A vaild Number: `);
+  }
 
-while (invaildNumber(num1)) {
-  console.log(`Oops.. that doesn't look like a vaild number`);
-  num1 = readline.question(`A vaild Number: `);
-}
+  prompt("Whats the second number: ");
+  let num2 = readline.question();
 
-prompt("Whats the second number: ");
-let num2 = readline.question();
+  while (invaildNumber(num2)) {
+    console.log(`Oops.. that doesn't look like a vaild number`);
+    num2 = readline.question(`A vaild Number: `);
+  }
 
-while (invaildNumber(num2)) {
-  console.log(`Oops.. that doesn't look like a vaild number`);
-  num2 = readline.question(`A vaild Number: `);
-}
+  prompt(
+    "What operation would you like to peform? \n1)Add 2)Subtract 3)Multiply 4)Divide"
+  );
+  let operation = readline.question();
+  while (!"1,2,3,4".includes(operation)) {
+    console.log(`It Has to be 1,2,3 or 4! `);
+    operation = readline.question();
+  }
 
-prompt(
-  "What operation would you like to peform? \n1)Add 2)Subtract 3) Multiply 4) Divide"
-);
-let operation = readline.question();
-while(!('1,2,3,4').includes(operation)) {
-console.log(`It Has to be 1,2,3 or 4! `);
-operation = readline.question();
-}
+  let outPut;
+  switch (operation) {
+    case "1":
+      outPut = Number(num1) + Number(num2);
+      break;
+    case "2":
+      outPut = Number(num1) - Number(num2);
+      break;
+    case "3":
+      outPut = Number(num1) * Number(num2);
+      break;
+    case "4":
+      outPut = Number(num1) / Number(num2);
+      break;
+  }
 
-let outPut;
-switch (operation) {
-  case "1":
-    outPut = Number(num1) + Number(num2);
+  prompt("The result is " + outPut.toFixed());
+  prompt("Would you like to do another calculation(yes/no)? ");
+  let answer = readline.question();
+  if (answer !== 'yes') {
+    prompt('Have a nice day!');
     break;
-  case "2":
-    outPut = Number(num1) - Number(num2);
-    break;
-  case "3":
-    outPut = Number(num1) * Number(num2);
-    break;
-  case "4":
-    outPut = Number(num1) / Number(num2);
-    break;
+  }
 }
-
-prompt("The result is " + outPut.toFixed());
