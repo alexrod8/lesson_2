@@ -13,7 +13,7 @@ function prompt(msg) {
 }
 
 function invaildNumber(num) {
-  return num.trim() === "" || num < 0 || Number.isNaN(Number(num));
+  return num.trim() === "" || num <= 0 || Number.isNaN(Number(num));
 }
 
 prompt(" Welcome to Alex Mortgage Calculator!");
@@ -33,7 +33,7 @@ while (true) {
     prompt("Must enter a vaild and positive number!");
     interestRate = readline.question();
   }
-  prompt("How long is the loan duration(years)?");
+  prompt("How long is the loan duration(months)?");
   let loanDuration = readline.question();
   while (invaildNumber(loanDuration)) {
     prompt("Must enter a vaild and positive number!");
