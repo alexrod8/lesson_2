@@ -7,6 +7,7 @@ let maxWins = 5;
 function prompt(msg) {
   console.log("=> " + msg);
 }
+
 function ShortReponse(shortChoice) {
   switch (shortChoice) {
     case "r":
