@@ -3,7 +3,8 @@
 // The winner is displayed.
 //vaildChoices = ["rock", "paper", "scissors", "lizard", "spock"];
 const readline = require("readline-sync");
-let maxWins = 5;
+const maxWins = 5;
+
 function prompt(msg) {
   console.log("=> " + msg);
 }
@@ -12,19 +13,18 @@ function ShortReponse(shortChoice) {
   switch (shortChoice) {
     case "r":
       return "rock";
-      break;
+
     case "p":
       return "paper";
-      break;
+
     case "s":
       return "scissors";
-      break;
+
     case "l":
       return "lizard";
-      break;
+
     case "sp":
       return "spock";
-      break;
   }
 }
 prompt("Welcome to Rock/Paper/Scissors/Lizard and Spock!");
@@ -34,6 +34,7 @@ function scoreTracker(playerWins, computerWins) {
   prompt("Player Wins: " + playerWins);
   prompt("Computer Wins: " + computerWins);
 }
+
 let playerWins = 0;
 let computerWins = 0;
 
